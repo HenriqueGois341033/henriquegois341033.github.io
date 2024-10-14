@@ -1,13 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const images = document.querySelectorAll("img");
+    const image_chicken_korma = document.querySelector("#image-chicken-korma");
+    const image_fish_and_chips = document.querySelector("#image-fish-and-chips");
+    const image_moussaka = document.querySelector("#image-moussaka");
 
-    for(const image of images){
-        fetch("https://dog.ceo/api/breeds/image/random")
-        .then(response => response.json())
-        .then(data => {
-            image.src = data.message
-            image.width = 100;
-            image.height = 100;
-        })
-    }
+    image_chicken_korma.src = "images/chicken_korma.jpg"
+    image_fish_and_chips.src = "images/fish_and_chips.jpg"
+    image_moussaka.src = "images/moussaka.jpg"
+
 })
